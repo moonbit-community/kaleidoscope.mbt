@@ -1,0 +1,508 @@
+{
+  "mappings": [
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1637,
+      "generated_offset": 3781,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1640,
+      "generated_offset": 3790,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1664,
+      "generated_offset": 4095,
+      "length": 17
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1683,
+      "generated_offset": 4120,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1687,
+      "generated_offset": 4130,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1734,
+      "generated_offset": 4431,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1755,
+      "generated_offset": 4458,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1759,
+      "generated_offset": 4468,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1794,
+      "generated_offset": 4720,
+      "length": 18
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1814,
+      "generated_offset": 4746,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1919,
+      "generated_offset": 5066,
+      "length": 20
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1941,
+      "generated_offset": 5094,
+      "length": 14
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1957,
+      "generated_offset": 5116,
+      "length": 3
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2149,
+      "generated_offset": 5423,
+      "length": 15
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2166,
+      "generated_offset": 5446,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2170,
+      "generated_offset": 5456,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2051,
+      "generated_offset": 5697,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2054,
+      "generated_offset": 5706,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2102,
+      "generated_offset": 5951,
+      "length": 12
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2116,
+      "generated_offset": 5971,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2003,
+      "generated_offset": 6172,
+      "length": 17
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1849,
+      "generated_offset": 6436,
+      "length": 20
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1871,
+      "generated_offset": 6464,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3074,
+      "generated_offset": 6916,
+      "length": 11
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3087,
+      "generated_offset": 6935,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3091,
+      "generated_offset": 6945,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3095,
+      "generated_offset": 6955,
+      "length": 21
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3118,
+      "generated_offset": 6984,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3204,
+      "generated_offset": 7476,
+      "length": 11
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3217,
+      "generated_offset": 7495,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3221,
+      "generated_offset": 7505,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3225,
+      "generated_offset": 7515,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3229,
+      "generated_offset": 7525,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3234,
+      "generated_offset": 7536,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2977,
+      "generated_offset": 7912,
+      "length": 10
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2989,
+      "generated_offset": 7930,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2993,
+      "generated_offset": 7940,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2997,
+      "generated_offset": 7950,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2904,
+      "generated_offset": 8175,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2907,
+      "generated_offset": 8184,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3372,
+      "generated_offset": 8425,
+      "length": 10
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3384,
+      "generated_offset": 8443,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2853,
+      "generated_offset": 8737,
+      "length": 12
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2867,
+      "generated_offset": 8757,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2871,
+      "generated_offset": 8767,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2213,
+      "generated_offset": 8991,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2216,
+      "generated_offset": 9000,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2355,
+      "generated_offset": 9290,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2376,
+      "generated_offset": 9317,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2380,
+      "generated_offset": 9327,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2413,
+      "generated_offset": 9618,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2434,
+      "generated_offset": 9645,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2438,
+      "generated_offset": 9655,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2248,
+      "generated_offset": 9946,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2269,
+      "generated_offset": 9973,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2273,
+      "generated_offset": 9983,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3417,
+      "generated_offset": 10283,
+      "length": 13
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3432,
+      "generated_offset": 10304,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3436,
+      "generated_offset": 10314,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2520,
+      "generated_offset": 10606,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2541,
+      "generated_offset": 10633,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2545,
+      "generated_offset": 10643,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2578,
+      "generated_offset": 10935,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2599,
+      "generated_offset": 10962,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2603,
+      "generated_offset": 10972,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2320,
+      "generated_offset": 11196,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2323,
+      "generated_offset": 11205,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2485,
+      "generated_offset": 11429,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2488,
+      "generated_offset": 11438,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2652,
+      "generated_offset": 11680,
+      "length": 18
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2672,
+      "generated_offset": 11706,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2705,
+      "generated_offset": 11931,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2708,
+      "generated_offset": 11940,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2753,
+      "generated_offset": 12180,
+      "length": 14
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2769,
+      "generated_offset": 12202,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3323,
+      "generated_offset": 12441,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3326,
+      "generated_offset": 12450,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3277,
+      "generated_offset": 12648,
+      "length": 15
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2802,
+      "generated_offset": 12904,
+      "length": 16
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 2820,
+      "generated_offset": 12928,
+      "length": 2
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1555,
+      "generated_offset": 13166,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1558,
+      "generated_offset": 13175,
+      "length": 1
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 1595,
+      "generated_offset": 13372,
+      "length": 19
+    },
+    {
+      "source": "kaleidoscope.mbty",
+      "original_offset": 3447,
+      "generated_offset": 75182,
+      "length": 1
+    }
+  ]
+}

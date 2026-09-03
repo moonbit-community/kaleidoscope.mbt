@@ -1,0 +1,14 @@
+# Fibonacci, the classic Kaleidoscope example.
+#
+# Run with JIT execution:
+#   moon run --target native main --run -- examples/fibonacci.kl
+# or print the generated LLVM IR:
+#   moon run --target native main -- examples/fibonacci.kl
+
+def fib(x)
+  if x < 3 then
+    1
+  else
+    fib(x - 1) + fib(x - 2);
+
+fib(10);

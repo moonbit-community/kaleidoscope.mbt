@@ -1,0 +1,14 @@
+# MoonBit build artifacts
+_build/
+
+# Moonyacc source map (regenerated alongside kaleidoscope_parser.mbt)
+# parser/*.mbt.map.json
+
+# Editor / OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+.mooncakes
+.openseek

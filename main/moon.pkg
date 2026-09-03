@@ -1,0 +1,16 @@
+import {
+  "kaleidoscope/lexer",
+  "kaleidoscope/parser",
+  "kaleidoscope/codegen",
+  "Kaida-Amethyst/llvm/IR",
+  "Kaida-Amethyst/llvm/JIT",
+  "moonbitlang/async",
+  "moonbitlang/async/fs",
+  "moonbitlang/async/stdio",
+  "moonbitlang/core/argparse",
+  "moonbitlang/x/sys",
+}
+
+supported_targets = "native"
+
+pkgtype(kind: "executable")

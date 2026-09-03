@@ -1,0 +1,22 @@
+# A tour of the control-flow and arithmetic subset.
+#
+#   moon run --target native main --run -- examples/control.kl
+#
+# Top-level items must be separated by ';' (bare adjacency between two
+# items is a parse error, which is what keeps the LR grammar conflict-free).
+
+# Recursion, comparison and if/then/else.
+def choose(flag)
+  if flag then 100 else -1;
+
+# A `for` loop executes its body once before testing the condition and the
+# loop expression evaluates to 0.0, exactly like the LLVM tutorial.
+def count(n)
+  for i = 1, i < n, 1.0 in
+    choose(if i < 4 then 1 else 0);
+
+choose(1);
+choose(0);
+-3 + 10;
+2 * 3 + 4;
+count(4);

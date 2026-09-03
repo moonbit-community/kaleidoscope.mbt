@@ -1,0 +1,6 @@
+import {
+  "kaleidoscope/parser",
+  "Kaida-Amethyst/llvm/IR",
+}
+
+supported_targets = "native"

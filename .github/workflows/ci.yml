@@ -1,0 +1,74 @@
+# CI for the Kaleidoscope demo (lexscan lexer + moonyacc parser + llvm.mbt).
+#
+# The native jobs run on ubuntu-latest (Linux x86_64) and macos-latest (macOS
+# ARM64), the two host triples for which Kaida-Amethyst/llvm ships prebuilt
+# LLVM artifacts. Windows is intentionally excluded.
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  # Fast static gate: formatting + warnings-as-errors type check.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: moonbit-community/setup-moonbit@main
+        with:
+          version: stable
+
+      - name: moon version
+        run: moon version
+
+      - name: Update registry index
+        run: moon update
+
+      - name: Formatting
+        run: moon fmt --check
+
+      - name: Type check with warnings as errors
+        run: moon check --deny-warn
+
+  # Full test matrix: frontend unit tests (JS + wasm) and native LLVM tests.
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: moonbit-community/setup-moonbit@main
+        with:
+          version: stable
+
+      - name: moon version
+        run: moon version
+
+      - name: Update registry index
+        run: moon update
+
+      - name: Frontend unit tests (lexer + parser, JS)
+        run: moon test lexer parser --target js
+
+      - name: Frontend unit tests (lexer + parser, wasm)
+        run: moon test lexer parser --target wasm
+
+      # Downloads and links the prebuilt LLVM static library (~29 MiB) once.
+      - name: Codegen tests (native LLVM)
+        run: moon test codegen --target native
+
+      - name: Build the CLI (native)
+        run: moon build --target native main
+
+      - name: End-to-end JIT smoke test
+        run: |
+          set -euo pipefail
+          actual="$(moon run --target native main --run -- examples/fibonacci.kl | tr -d '[:space:]')"
+          test "$actual" = "55"

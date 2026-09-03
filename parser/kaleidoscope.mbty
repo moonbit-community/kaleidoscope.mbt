@@ -1,0 +1,140 @@
+// Kaleidoscope grammar for MoonYacc.
+//
+// Regenerate the parser with:
+//   moonx --target native moonbitlang/yacc -- kaleidoscope.mbty \
+//     --input-mode array -o kaleidoscope_parser.mbt
+// The generated parser is committed; run `moon check` after regenerating.
+//
+// The grammar is free of shift/reduce conflicts. Top-level items must be
+// terminated by ';' so two constructs never touch each other, and the
+// precedence declarations only steer moonyacc's conflict resolution (the
+// `if`/`for` bodies are greedy, exactly like the LLVM tutorial).
+// The grammar follows the classic Kaleidoscope language: doubles only,
+// user functions via `def`, foreign declarations via `extern`, calls,
+// arithmetic with `< + - * /`, `if/then/else` and `for/in` expressions.
+
+%derive<Debug> Token
+%derive<Debug> ParseError
+%position<Int>
+%start parse_program
+
+%token<Double> NUMBER
+%token<String> IDENT
+%token DEF "def"
+%token EXTERN "extern"
+%token IF "if"
+%token THEN "then"
+%token ELSE "else"
+%token FOR "for"
+%token IN "in"
+%token LPAREN "("
+%token RPAREN ")"
+%token COMMA ","
+%token SEMI ";"
+%token EQUAL "="
+%token PLUS "+"
+%token MINUS "-"
+%token STAR "*"
+%token SLASH "/"
+%token LT "<"
+
+%type<Array[TopLevel]> parse_program
+%type<Array[TopLevel]> program
+%type<TopLevel> topdef
+%type<Prototype> prototype
+%type<Array[String]> param_list
+%type<Array[String]> params
+%type<Expr> expr
+%type<Expr> add_expr
+%type<Expr> mul_expr
+%type<Expr> unary_expr
+%type<Expr> primary
+%type<Array[Expr]> arg_list
+%type<Array[Expr]> args
+
+// Precedence declarations. The grammar is layered, so these do not change
+// ordinary expression parsing; they only steer moonyacc's resolution of the
+// remaining shift/reduce conflicts (the greedy `if`/`for` bodies): shifting a
+// binary operator is preferred over closing a construct early.
+%left LT
+%left PLUS MINUS
+%left STAR SLASH
+
+%%
+
+parse_program
+  : program         { $1 }
+  ;
+
+program
+  : /* empty */     { empty_toplevels() }
+  | program ";"     { $1 }
+  | program topdef  { append_toplevel($1, $2) }
+  ;
+
+topdef
+  : "def" prototype expr ";"  { TopLevel::FuncDef($2, $3) }
+  | "extern" prototype ";"    { TopLevel::Extern($2) }
+  | expr ";"                  { TopLevel::AnonExpr($1) }
+  ;
+
+prototype
+  : IDENT "(" params ")"    { Prototype::{ name: $1, parameters: $3 } }
+  ;
+
+params
+  : /* empty */             { empty_strings() }
+  | param_list              { $1 }
+  ;
+
+param_list
+  : IDENT                   { one_string($1) }
+  | param_list IDENT        { append_string($1, $2) }
+  ;
+
+expr
+  : add_expr                { $1 }
+  | expr "<" add_expr       { Expr::Binary("<", $1, $3) }
+  ;
+
+add_expr
+  : mul_expr                { $1 }
+  | add_expr "+" mul_expr   { Expr::Binary("+", $1, $3) }
+  | add_expr "-" mul_expr   { Expr::Binary("-", $1, $3) }
+  ;
+
+mul_expr
+  : unary_expr              { $1 }
+  | mul_expr "*" unary_expr { Expr::Binary("*", $1, $3) }
+  | mul_expr "/" unary_expr { Expr::Binary("/", $1, $3) }
+  ;
+
+unary_expr
+  : "-" unary_expr          { Expr::Unary("-", $2) }
+  | primary                 { $1 }
+  ;
+
+primary
+  : NUMBER                  { Expr::Number($1) }
+  | IDENT                   { Expr::Variable($1) }
+  | IDENT "(" args ")"      { Expr::Call($1, $3) }
+  | "(" expr ")"            { $2 }
+  | "if" expr "then" expr "else" expr
+                            { Expr::If($2, $4, $6) }
+  | "for" IDENT "=" expr "," expr "in" expr
+                            { Expr::For($2, $4, $6, Expr::Number(1.0), $8) }
+  | "for" IDENT "=" expr "," expr "," expr "in" expr
+                            { Expr::For($2, $4, $6, $8, $10) }
+  ;
+
+args
+  : /* empty */             { empty_exprs() }
+  | arg_list                { $1 }
+  ;
+
+arg_list
+  : expr                    { one_expr($1) }
+  | arg_list "," expr       { append_expr($1, $3) }
+  ;
+
+%%
